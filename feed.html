@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Dashboard</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f88ed269c0.js" crossorigin="anonymous"></script>
+    
+    <!-- Interaction table -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('t9N7cl4uYfhVt08vw'); // Ganti dengan kunci publik Anda dari EmailJS
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                console.log('Mengirim formulir...'); // Log untuk debugging
+                emailjs.sendForm('service_ntt8oj6', 'template_wjwjeyd', this)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text); // Log untuk debugging
+                        alert('Pesan telah terkirim!');
+                        document.getElementById('contact-form').reset(); // Reset form setelah sukses
+                    }, function(error) {
+                        console.error('FAILED...', error); // Log untuk debugging
+                        alert('Pengiriman gagal. Coba lagi nanti.');
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="images/coffeelogo.png" alt="">
+    </a>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<!-- header section ends -->
+
+<section class="contact" id="contact">
+    <h1 class="heading"> <span>Hubungi</span> Kami </h1>
+    <div class="row">
+        <form id="contact-form">
+            <h1 class="heading"> Feed <span>Back</span> </h1>
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" name="name" placeholder="Nama" required>
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-comments"></span>
+                <input name="message" placeholder="Saran" required></input>
+            </div>
+            <input type="submit" value="Send" class="btn">
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "transaction_date": "Januari",
+    "Sales": 20.026
+  },
+  {
+    "transaction_date": "Februari",
+    "Sales": 18.953
+  },
+  {
+    "transaction_date": "Maret",
+    "Sales": 24.54
+  },
+  {
+    "transaction_date": "April",
+    "Sales": 29.287
+  },
+  {
+    "transaction_date": "Mei",
+    "Sales": 38.41
+  },
+  {
+    "transaction_date": "Juni",
+    "Sales": 40.989
+  }
+]

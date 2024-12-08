@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Dashboard</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f88ed269c0.js" crossorigin="anonymous"></script>
+    
+    <!-- Load Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Interaction table -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="images/coffeelogo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#Category">Category</a>
+        <a href="#Product">Product</a>
+        <a href="#Type">Type</a>
+        <a href="#Store">Store</a>
+        <a href="#Transaction">Transaction</a>
+        <a href="feed.html">Feedback</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Coffe Shop Dashboard</h3>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<!-- Product Category section starts  -->
+
+<section class="products" id="Category">
+
+    <h1 class="heading"> Product <span>Category</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/chocolate.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Packaged Chocolate</h3>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="image">
+                <img src="images/bakery.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Bakery</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/branded.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Branded</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/coffee.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Coffee</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/coffeebeans.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Coffee Beans</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/drinkingchocolate.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Drinking Chocolate</h3>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="image">
+                <img src="images/flavour.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Flavours</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/loosetea.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Loose Tea</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/tea.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Tea</h3>
+            </div>
+        </div>
+
+</section>
+
+<!-- Product Category section starts  -->
+
+<!-- Product Detail section starts  -->
+
+<section class="menu" id="Product">
+
+    <h1 class="heading"> Product <span>Detail</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/cm.jpeg" alt="">
+            <h3>Chili Mayan</h3>
+            <div class="price">$ 13,33 <span>$ 15,00</span></div>
+        </div>
+
+
+        <div class="box">
+            <img src="images/dc.jpg" alt="">
+            <h3>Dark Chocolate</h3>
+            <div class="price">$ 6,4 <span>$ 7,00</span></div>
+        </div>
+
+        <div class="box">
+            <img src="images/sg.webp" alt="">
+            <h3>Sustainably Grown Organic</h3>
+            <div class="price">$ 7,6 <span>$ 8,00</span></div>
+        </div>
+
+    </section>
+   
+<!-- Product Detail section ends  -->
+
+
+<!-- Product Type section starts  -->
+
+<section class="blogs" id="Type">
+
+    <h1 class="heading"> Product <span>Type</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/blog-1.jpeg" alt="">
+            </div>
+            <div class="content">
+                <a href="#products" class="title">Drinking Chocolate</a>
+                <p>Type Drinking Chocolate ini menyediakan produk berupa Dark Chocolate dan Chili Mayan.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/sgo.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#products" class="title">Organic Chocolate</a>
+                <p>Type Organic Chocolate dari Coffe Shop kami hanya menawarkan produk berupa Sustainably Grown Organic.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- Product Type section ends -->
+
+<!-- store location section starts  -->
+
+<section class="review" id="Store">
+
+    <h1 class="heading"> Store <span>Location</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/lw.jpg" alt="" class="quote">
+            <br> <br> <br>
+            <h3>Lower Manhattan</h3>
+        </div>
+
+        <div class="box">
+            <img src="images/hk.jpg" alt="" class="quote">
+            <br> <br> <br>
+            <h3>Hell's kitchen</h3>
+        </div>
+        
+        <div class="box">
+            <img src="images/as.jpg" alt="" class="quote">
+            <br> <br> <br>
+            <h3>Astoria</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- store location section ends -->
+
+<!-- Transaction section starts -->
+
+<section class="transaction" id="Transaction">
+
+    <h1 class="heading"> <span>Transaction</span> Sales </h1>
+
+    <div class="chart-container">
+        <h2>SALES_QUANTITY to UNIT_PRICE</h2>
+        <canvas id="salesChart"></canvas>
+        <caption class="chart-caption">Sales Chart</caption>
+    </div>
+
+    <div class="chart-container">
+        <h2>TOTAL_SALES to PRODUCT</h2>
+        <canvas id="productSalesChart"></canvas>
+        <caption class="chart-caption">Bar Chart</caption>
+    </div>
+
+    <div class="chart-container">
+        <h2>UNIT_PRICE to PRODUCT</h2>
+        <canvas id="unitPriceChart"></canvas>
+        <caption class="chart-caption">Bar Chart Unit Price</caption>
+    </div>
+
+    <div class="chart-container">
+        <h2>TRANSACTIONS_QUANTITY to MONTH</h2>
+        <canvas id="transactionChart"></canvas>
+        <caption class="chart-caption">Bar Chart Transaction</caption>
+    </div>
+    
+    <div class="chart-container">
+        <h2>TOTAL_SALES to MONTH</h2>
+        <canvas id="salesOverTimeChart"></canvas>
+        <caption class="chart-caption">Line Chart Sales</caption>
+    </div>
+
+    <div class="chart-container">
+        <h2>Data Table</h2>
+        <table id="data-table" class="display responsive nowrap" style="width:100%">
+             
+            <div>
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate">
+                <button id="filterButton">Filter</button>
+            </div>
+
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Transaction Date</th>
+                    <th>Transaction Time</th>
+                    <th>Transaction Quantity</th>
+                    <th>Store ID</th>
+                    <th>Store Location</th>
+                    <th>Product ID</th>
+                    <th>Unit Price</th>
+                    <th>Product Category</th>
+                    <th>Product Type</th>
+                    <th>Product Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- Transaction section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#footer" class="fab fa-instagram"></a>
+        <a href="#footer" class="fab fa-facebook"></a>
+        <a href="#footer" class="fab fa-linkedin"></a>
+        <a href="#footer" class="fab fa-twitter"></a>
+    </div>
+
+
+    <div class="credit">Created by <span>Daniel Mayndeta</span></div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="js/diagram.js"></script>
+
+
+
+</body>
+</html>

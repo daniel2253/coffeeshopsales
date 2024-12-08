@@ -1,0 +1,92 @@
+[
+  {
+    "transaction_date (Tanggal)": "Januari",
+    "store_location": "Lower Manhattan",
+    "transaction_qty": 8.249
+  },
+  {
+    "transaction_date (Tanggal)": "Januari",
+    "store_location": "Hell's Kitchen",
+    "transaction_qty": 8.34
+  },
+  {
+    "transaction_date (Tanggal)": "Januari",
+    "store_location": "Astoria",
+    "transaction_qty": 8.281
+  },
+  {
+    "transaction_date (Tanggal)": "Februari",
+    "store_location": "Lower Manhattan",
+    "transaction_qty": 7.895
+  },
+  {
+    "transaction_date (Tanggal)": "Februari",
+    "store_location": "Astoria",
+    "transaction_qty": 7.718
+  },
+  {
+    "transaction_date (Tanggal)": "Februari",
+    "store_location": "Hell's Kitchen",
+    "transaction_qty": 7.937
+  },
+  {
+    "transaction_date (Tanggal)": "Maret",
+    "store_location": "Hell's Kitchen",
+    "transaction_qty": 10.198
+  },
+  {
+    "transaction_date (Tanggal)": "Maret",
+    "store_location": "Lower Manhattan",
+    "transaction_qty": 10.209
+  },
+  {
+    "transaction_date (Tanggal)": "Maret",
+    "store_location": "Astoria",
+    "transaction_qty": 9.999
+  },
+  {
+    "transaction_date (Tanggal)": "April",
+    "store_location": "Lower Manhattan",
+    "transaction_qty": 12.249
+  },
+  {
+    "transaction_date (Tanggal)": "April",
+    "store_location": "Astoria",
+    "transaction_qty": 12.026
+  },
+  {
+    "transaction_date (Tanggal)": "April",
+    "store_location": "Hell's Kitchen",
+    "transaction_qty": 12.194
+  },
+  {
+    "transaction_date (Tanggal)": "Mei",
+    "store_location": "Astoria",
+    "transaction_qty": 16.114
+  },
+  {
+    "transaction_date (Tanggal)": "Mei",
+    "store_location": "Hell's Kitchen",
+    "transaction_qty": 15.944
+  },
+  {
+    "transaction_date (Tanggal)": "Mei",
+    "store_location": "Lower Manhattan",
+    "transaction_qty": 16.175
+  },
+  {
+    "transaction_date (Tanggal)": "Juni",
+    "store_location": "Astoria",
+    "transaction_qty": 16.853
+  },
+  {
+    "transaction_date (Tanggal)": "Juni",
+    "store_location": "Hell's Kitchen",
+    "transaction_qty": 17.124
+  },
+  {
+    "transaction_date (Tanggal)": "Juni",
+    "store_location": "Lower Manhattan",
+    "transaction_qty": 16.965
+  }
+]
