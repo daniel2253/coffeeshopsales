@@ -1,38 +1,47 @@
 [
-    {
-      "product_category": "Coffee",
-      "Sales": "176.629,30"
-    },
-    {
-      "product_category": "Tea",
-      "Sales": "128.035,35"
-    },
-    {
-      "product_category": "Bakery",
-      "Sales": "80.964,14"
-    },
-    {
-      "product_category": "Drinking Chocolate",
-      "Sales": "47.578,75"
-    },
-    {
-      "product_category": "Coffee beans",
-      "Sales": "36.845,25"
-    },
-    {
-      "product_category": "Branded",
-      "Sales": "13.237,00"
-    },
-    {
-      "product_category": "Loose Tea",
-      "Sales": "11.213,60"
-    },
-    {
-      "product_category": "Flavours",
-      "Sales": "5.432,00"
-    },
-    {
-      "product_category": "Packaged Chocolate",
-      "Sales": "4.407,64"
-    }
-  ]
+  {
+    "product_category": "Coffee",
+    "unit_price": "3.02",
+    "Sales": "89250"
+  },
+  {
+    "product_category": "Tea",
+    "unit_price": "2.82",
+    "Sales": "69737"
+  },
+  {
+    "product_category": "Bakery",
+    "unit_price": "3.55",
+    "Sales": "23214"
+  },
+  {
+    "product_category": "Drinking Chocolate",
+    "unit_price": "4.15",
+    "Sales": "17457"
+  },
+  {
+    "product_category": "Flavours",
+    "unit_price": "0.80",
+    "Sales": "10511"
+  },
+  {
+    "product_category": "Coffee beans",
+    "unit_price": "21.02",
+    "Sales": "1828"
+  },
+  {
+    "product_category": "Loose Tea",
+    "unit_price": "9.27",
+    "Sales": "1210"
+  },
+  {
+    "product_category": "Branded",
+    "unit_price": "17.72",
+    "Sales": "776"
+  },
+  {
+    "product_category": "Packaged Chocolate",
+    "unit_price": "9.05",
+    "Sales": "487"
+  }
+]

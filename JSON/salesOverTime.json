@@ -1,26 +1,62 @@
 [
   {
-    "transaction_date": "Januari",
-    "Sales": 20.026
+      "hour": 6,
+      "average_sales": 45.9
   },
   {
-    "transaction_date": "Februari",
-    "Sales": 18.953
+      "hour": 7,
+      "average_sales": 134.2
   },
   {
-    "transaction_date": "Maret",
-    "Sales": 24.54
+      "hour": 8,
+      "average_sales": 176.5
   },
   {
-    "transaction_date": "April",
-    "Sales": 29.287
+    "hour": 9,
+    "average_sales": 185.4
   },
   {
-    "transaction_date": "Mei",
-    "Sales": 38.41
+    "hour": 10,
+    "average_sales": 130.6
   },
   {
-    "transaction_date": "Juni",
-    "Sales": 40.989
+    "hour": 11,
+    "average_sales": 87
+  },
+  {
+    "hour": 12,
+    "average_sales": 88
+  },
+  {
+    "hour": 13,
+    "average_sales": 87.4
+  },
+  {
+    "hour": 14,
+    "average_sales": 89.3
+  },
+  {
+    "hour": 15,
+    "average_sales": 89.7
+  },
+  {
+    "hour": 16,
+    "average_sales": 100.9
+  },
+  {
+    "hour": 17,
+    "average_sales": 87.4
+  },
+  {
+    "hour": 18,
+    "average_sales": 74.9
+  },
+  {
+    "hour": 19,
+    "average_sales": 60.9
+  },
+  {
+    "hour": 20,
+    "average_sales": 10.2
   }
 ]

@@ -16,33 +16,87 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`;
             });
 
+            const categoryMap = {};
+            data.forEach(item => {
+                const category = item.product_category;
+                const unitPrice = parseFloat(item.unit_price);
+                if (!categoryMap[category]) {
+                    categoryMap[category] = { total: 0, count: 0 };
+                }
+                categoryMap[category].total += unitPrice;
+                categoryMap[category].count += 1;
+            });
+
+            const averageUnitPrices = Object.keys(categoryMap).map(category => ({
+                category,
+                avgUnitPrice: categoryMap[category].total / categoryMap[category].count
+            }));
+
+            // Generate data points for Scatter Diagram
+            const scatterData = averageUnitPrices.map(item => {
+                const sales = data
+                    .filter(d => d.product_category === item.category)
+                    .reduce((sum, d) => sum + parseFloat(d.Sales.replace(/\./g, '').replace(',', '.')), 0);
+                return { x: item.avgUnitPrice, y: sales, category: item.category };
+            });
+
+
             const salesChart = new Chart(ctx, {
                 type: 'scatter',
                 data: {
-                    labels: labels,
                     datasets: [{
                         label: 'Scatter Diagram',
-                        data: salesData.map((value, index) => ({ x: index, y: value })),
+                        data: scatterData,
                         backgroundColor: backgroundColors,
                         borderColor: borderColors,
                         borderWidth: 1,
-                        pointRadius: 6
+                        pointRadius: 10
                     }]
                 },
                 options: {
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    // Ambil data nama kategori produk berdasarkan index titik data
+                                    const category = context.raw.category; // Ambil kategori dari data
+                                    const xValue = context.raw.x.toFixed(2); // Nilai rata-rata unit_price
+                                    const yValue = context.raw.y.toFixed(2); // Nilai total sales
+                
+                                    return `Category: ${category}\nUnit Price: ${xValue}\nSales: ${yValue}`;
+                                }
+                            }
+                        }
+                    },
                     scales: {
                         x: {
                             type: 'linear',
                             position: 'bottom',
                             title: {
                                 display: true,
-                                text: 'Product Index'
+                                text: 'Average Unit Price',
+                                font: {
+                                    size:20
+                                }
+                            },
+                            ticks:{
+                                font:{
+                                    size:20
+                                }
                             }
                         },
                         y: {
                             title: {
                                 display: true,
-                                text: 'Sales Quantity'
+                                text: 'Total Sales',
+                                font: {
+                                    size:20
+                                }
+                            },
+                            ticks:{
+                                font:{
+                                    size:20
+                                }
                             }
                         }
                     }
@@ -87,13 +141,29 @@ document.addEventListener('DOMContentLoaded', () => {
                         x: {
                             title: {
                                 display: true,
-                                text: 'Month'
+                                text: 'Month',
+                                font: {
+                                    size: 20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         },
                         y: {
                             title: {
                                 display: true,
-                                text: 'Transaction Quantity'
+                                text: 'Transaction Quantity',
+                                font: {
+                                    size: 20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         }
                     }
@@ -140,16 +210,33 @@ document.addEventListener('DOMContentLoaded', () => {
                         x: {
                             title: {
                                 display: true,
-                                text: 'Unit Price'
+                                text: 'Unit Price ($)',
+                                font: {
+                                    size: 20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         },
                         y: {
                             title: {
                                 display: true,
-                                text: 'Product Category'
+                                text: 'Product Category',
+                                font: {
+                                    size: 20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         }
                     }
+                    
                 }
             });
         })
@@ -158,22 +245,24 @@ document.addEventListener('DOMContentLoaded', () => {
 //unitPrice ends
 
 
-//salesOverTime chart starts
+// Sales Over Time Chart starts (Modified for average sales per hour)
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('JSON/salesOverTime.json')
+    fetch('JSON/salesOverTime.json') // Pastikan file JSON yang benar digunakan
         .then(response => response.json())
         .then(data => {
-            const labels = data.map(item => item.transaction_date);
-            const salesData = data.map(item => item.Sales);
+            // Menyiapkan data untuk chart
+            const hours = data.map(item => item.hour); // Jam (0-23)
+            const averageSales = data.map(item => item.average_sales); // Rata-rata penjualan per jam
 
+            // Membuat chart
             const ctx = document.getElementById('salesOverTimeChart').getContext('2d');
             const salesOverTimeChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: labels,
+                    labels: hours, // Jam transaksi
                     datasets: [{
-                        label: 'Sales Over Time',
-                        data: salesData,
+                        label: 'Average Sales Per Hour',
+                        data: averageSales,
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
                         borderColor: 'rgba(75, 192, 192, 1)',
                         borderWidth: 2,
@@ -185,14 +274,30 @@ document.addEventListener('DOMContentLoaded', () => {
                         x: {
                             title: {
                                 display: true,
-                                text: 'Month'
+                                text: 'Hour of the Day',
+                                font:{
+                                    size:20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         },
                         y: {
                             beginAtZero: true,
                             title: {
                                 display: true,
-                                text: 'Sales'
+                                text: 'Average Sales',
+                                font:{
+                                    size:20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         }
                     }
@@ -201,7 +306,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching the JSON data:', error));
 });
-//salesOverTime chart ends
+// Sales Over Time Chart ends
+
+
 
 
 
@@ -239,16 +346,33 @@ document.addEventListener('DOMContentLoaded', () => {
                         x: {
                             title: {
                                 display: true,
-                                text: 'Product Category'
+                                text: 'Product Category',
+                                font: {
+                                    size: 20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         },
                         y: {
                             title: {
                                 display: true,
-                                text: 'Sales (€)'
+                                text: 'Sales',
+                                font: {
+                                    size: 20
+                                }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
                             }
                         }
                     }
+                    
                 }
             });
         })

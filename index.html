@@ -33,14 +33,12 @@
 <header class="header">
 
     <a href="#" class="logo">
-        <img src="images/coffeelogo.png" alt="">
+        <img src="images/whitecoffee.png" alt="">
     </a>
 
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="#Category">Category</a>
-        <a href="#Product">Product</a>
-        <a href="#Type">Type</a>
         <a href="#Store">Store</a>
         <a href="#Transaction">Transaction</a>
         <a href="feed.html">Feedback</a>
@@ -161,72 +159,7 @@
 
 <!-- Product Category section starts  -->
 
-<!-- Product Detail section starts  -->
 
-<section class="menu" id="Product">
-
-    <h1 class="heading"> Product <span>Detail</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <img src="images/cm.jpeg" alt="">
-            <h3>Chili Mayan</h3>
-            <div class="price">$ 13,33 <span>$ 15,00</span></div>
-        </div>
-
-
-        <div class="box">
-            <img src="images/dc.jpg" alt="">
-            <h3>Dark Chocolate</h3>
-            <div class="price">$ 6,4 <span>$ 7,00</span></div>
-        </div>
-
-        <div class="box">
-            <img src="images/sg.webp" alt="">
-            <h3>Sustainably Grown Organic</h3>
-            <div class="price">$ 7,6 <span>$ 8,00</span></div>
-        </div>
-
-    </section>
-   
-<!-- Product Detail section ends  -->
-
-
-<!-- Product Type section starts  -->
-
-<section class="blogs" id="Type">
-
-    <h1 class="heading"> Product <span>Type</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <div class="image">
-                <img src="images/blog-1.jpeg" alt="">
-            </div>
-            <div class="content">
-                <a href="#products" class="title">Drinking Chocolate</a>
-                <p>Type Drinking Chocolate ini menyediakan produk berupa Dark Chocolate dan Chili Mayan.</p>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="images/sgo.jpg" alt="">
-            </div>
-            <div class="content">
-                <a href="#products" class="title">Organic Chocolate</a>
-                <p>Type Organic Chocolate dari Coffe Shop kami hanya menawarkan produk berupa Sustainably Grown Organic.</p>
-            </div>
-        </div>
-
-
-    </div>
-
-</section>
-
-<!-- Product Type section ends -->
 
 <!-- store location section starts  -->
 
@@ -266,16 +199,18 @@
 
     <h1 class="heading"> <span>Transaction</span> Sales </h1>
 
-    <div class="chart-container">
-        <h2>SALES_QUANTITY to UNIT_PRICE</h2>
-        <canvas id="salesChart"></canvas>
-        <caption class="chart-caption">Sales Chart</caption>
-    </div>
+    
 
     <div class="chart-container">
         <h2>TOTAL_SALES to PRODUCT</h2>
         <canvas id="productSalesChart"></canvas>
         <caption class="chart-caption">Bar Chart</caption>
+    </div>
+    <div class="analisis">
+        <p>
+            Hasil analisis menunjukkan bahwa kategori Coffee menjadi produk terlaris dengan total penjualan sebesar 89.250 unit, diikuti oleh Tea 69.737 unit dan Bakery 23.214 unit. 
+            Sedangkan kategori produk yang kurang diminati adalah Packaged Chocolate yang hanya memiliki penjualan 487 unit.
+        </p>
     </div>
 
     <div class="chart-container">
@@ -283,17 +218,49 @@
         <canvas id="unitPriceChart"></canvas>
         <caption class="chart-caption">Bar Chart Unit Price</caption>
     </div>
+    <div class="analisis">
+        <p>
+            Diagram diatas menunjukkan harga untuk setiap kategori produk. Kategori produk Coffee Beans memiliki rata-rata harga tertinggi ($21.02). 
+            Dilanjutkan dengan produk Branded ($17.72) dan Loose Tea ($9.27). Sedangkan kategori produk dengan harga termurah adalah Flavours ($0.8).
+        </p>
+    </div>
+
+    <div class="chart-container">
+        <h2>SALES_QUANTITY to UNIT_PRICE</h2>
+        <canvas id="salesChart"></canvas>
+        <caption class="chart-caption">Sales Chart</caption>
+    </div>
+    <div class="analisis">
+        <p>
+            Visualisasi diatas menunjukkan grafik scatter plot untuk korelasi jumlah penjualan dengan harga produk. 
+            Dari grafik tersebut terlihat bahwa penjualan Coffee merupakan penjualan paling tinggi dengan jumlah 89.250 penjualan dan harga rata-rata relatif murah ($3.02) diantara produk yang lain. Sedangkan produk Coffe Beans memiliki harga tertinggi ($21.02) hanya memiliki 1828 unit penjualan. 
+            Artinya konsumen cenderung membeli produk dengan harga yang murah.
+        </p>
+    </div>
 
     <div class="chart-container">
         <h2>TRANSACTIONS_QUANTITY to MONTH</h2>
         <canvas id="transactionChart"></canvas>
         <caption class="chart-caption">Bar Chart Transaction</caption>
     </div>
+    <div class="analisis">
+        <p>
+            Diagram diatas menunjukkan total penjualan ke-3 cabang toko pada 6 bulan terakhir (Januari – Juni).
+            Hasil analisis menunjukkan adanya kenaikan penjualan dari Februari ke Maret dan seterusnya. 
+            Total penjualan tertinggi berada pada bulan Juni dengan penjualan cabang Lower Manhattan (16.695 unit), Hells’ Kitchen (17.124 unit), dan Astoria (16.853 unit).
+        </p>
+    </div>
     
     <div class="chart-container">
-        <h2>TOTAL_SALES to MONTH</h2>
+        <h2>AVERAGE_TRANSACTION to HOUR</h2>
         <canvas id="salesOverTimeChart"></canvas>
         <caption class="chart-caption">Line Chart Sales</caption>
+    </div>
+    <div class="analisis">
+        <p>
+            Visualisasi diatas menunjukkan rata – rata penjualan tiap jam nya. Terlihat rata – rata penjualan tertinggi terjadi pada pukul 09.00, dengan rata – rata 185.4 penjualan. 
+            Artinya, konsumen cenderung datang membeli kopi di pagi hari sebelum beraktivitas.
+        </p>
     </div>
 
     <div class="chart-container">

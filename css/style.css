@@ -616,15 +616,24 @@ th {
     background-color: #007bff; /* Warna latar belakang header kolom */
     color: black; /* Warna teks header kolom menjadi hitam */
 }
+.analisis{
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: justify;
+    font-family: 'Times New Roman';
+}
 
 .chart-container {
     border: 1px solid #ccc;
     margin-bottom: 20px;
     padding: 10px;
-    color: white; /* Warna teks dalam chart-container menjadi putih */
+    font-size: large;
+    color: rgb(0, 0, 0); /* Warna teks dalam chart-container menjadi putih */
     width: 100%; /* Mengatur lebar elemen chart menjadi 100% dari lebar container */
     box-sizing: border-box; /* Menghitung padding dan border ke dalam total lebar elemen */
     display: block; /* Mengubah elemen menjadi block agar bisa menyesuaikan lebar dengan konten di sekitarnya */
+    background-color: #ffffff;
 }
 
 /* Stil untuk input search */

@@ -1,38 +1,38 @@
 [
   {
     "product_category": "Coffee beans",
-    "Unit Price": 22
+    "Unit Price": 21.02
   },
   {
     "product_category": "Branded",
-    "Unit Price": 16
+    "Unit Price": 17.72
   },
   {
     "product_category": "Loose Tea",
-    "Unit Price": 9
+    "Unit Price": 9.27
   },
   {
     "product_category": "Packaged Chocolate",
-    "Unit Price": 9
+    "Unit Price": 9.05
   },
   {
     "product_category": "Drinking Chocolate",
-    "Unit Price": 4
+    "Unit Price": 4.15
   },
   {
     "product_category": "Bakery",
-    "Unit Price": 4
+    "Unit Price": 3.55
   },
   {
     "product_category": "Coffee",
-    "Unit Price": 3
+    "Unit Price": 3.02
   },
   {
     "product_category": "Tea",
-    "Unit Price": 3
+    "Unit Price": 2.82
   },
   {
     "product_category": "Flavours",
-    "Unit Price": 1
+    "Unit Price": 0.80
   }
 ]
